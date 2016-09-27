@@ -1,8 +1,7 @@
 #!/bin/bash
 
 
-BASEDIR=$(pwd)
-
+BASEDIR=$WERCKER_OUTPUT_DIR
 if [ -n "$WERCKER_RESIZE_BASEDIR" ]; then
   BASEDIR="${BASEDIR}/${WERCKER_RESIZE_BASEDIR}"
 fi
