@@ -1,0 +1,18 @@
+name: resize-images
+version: 0.0.1
+description: Resizes JPG images using ImageMagick.
+keywords:
+  - image
+  - resize
+  - compress
+  - imagemagick
+properties:
+  geometry:
+    type: string
+    required: true
+  basedir:
+    type: string
+    required: false
+  resized_suffix:
+    type: string
+    required: false
