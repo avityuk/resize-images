@@ -1,5 +1,5 @@
 name: resize-images
-version: 0.0.6
+version: 0.0.7
 description: Resizes JPG images using ImageMagick.
 keywords:
   - image
