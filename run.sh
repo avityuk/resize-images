@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 
 BASEDIR=$WERCKER_OUTPUT_DIR
 if [ -n "$WERCKER_RESIZE_BASEDIR" ]; then
