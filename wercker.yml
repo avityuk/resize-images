@@ -1,8 +1,10 @@
-build:
-    steps:
-        - shellcheck:
-            files: run.sh
+box: wercker/default
 
-        - script:
-            name: prepare output
-            code: rm -rf $WERCKER_ROOT/.git
+build:
+  steps:
+      - shellcheck:
+        files: run.sh
+
+      - script:
+        name: prepare output
+        code: rm -rf $WERCKER_ROOT/.git
