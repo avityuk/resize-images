@@ -20,7 +20,7 @@ for file in $files; do
     -resize "${WERCKER_RESIZE_IMAGES_GEOMETRY}" \
     -sampling-factor 1x1 \
     -unsharp 1.5x1+0.7+0.02 \
-    -quality "{$WERCKER_RESIZE_QUALITY}" \
+    -quality "${WERCKER_RESIZE_QUALITY}" \
     -interlace none \
     -colorspace sRGB \
     -strip \
