@@ -12,7 +12,12 @@ if [ -n "$WERCKER_RESIZE_IMAGES_RESIZED_SUFFIX" ]; then
   SUFFIX=$WERCKER_RESIZE_IMAGES_RESIZED_SUFFIX
 fi
 
-files=$(find "$BASEDIR" -name '*.jpg')
+if [ -n "$WERCKER_RESIZE_IMAGES_EXCLUDE_PATTERN" ]; then
+  files=$(find "$BASEDIR" -name '*.jpg' -and -not -name "$WERCKER_RESIZE_IMAGES_EXCLUDE_PATTERN")
+else
+  files=$(find "$BASEDIR" -name '*.jpg')  
+fi
+
 for file in $files; do
   convert "$file" \
     -filter Lanczos \
